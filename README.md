@@ -25,3 +25,27 @@ the schema has 3 main tasks:
 - Define root queries this is how we descrive how the user jumps into the graph and grab data
 
 ### Root Query
+
+### Mutations
+
+Mutations is what allows us to mutate data, add data, delete data, edit data. We have to explicit declare the mutations
+
+```js
+mutation {
+  addAuthor(name: "Juan", age:29){
+    name
+    age
+  }
+}
+
+mutation {
+  addBook(
+    name: "React Instructions", 
+    genre: "Tecnical data",
+    authorId: "5d6f3da1734c243cb8c603c6" 
+  ){
+    name
+    genre
+  }
+}
+```
